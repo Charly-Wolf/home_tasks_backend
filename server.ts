@@ -12,7 +12,7 @@ app.use(express.json())
 
 app.use('/tasks', taskRoutes)
 
-const PORT = process.env.PORT || 5000
+const PORT = process.env.PORT 
 const MONGO_URL = process.env.MONGO_URL
 
 console.log('🔍 Variables de entorno:', process.env)
