@@ -7,6 +7,7 @@
     "dev": "nodemon --watch src --ext ts --exec ts-node -r dotenv/config src/server.ts",
     "prebuild": "mkdir dist && npm install --include=dev",
     "build": "tsc",
+    "vercel-build": "npm run build",
     "start": "node dist/server.js",
     "start:dev": "ts-node -r dotenv/config src/server.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
