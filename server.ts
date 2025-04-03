@@ -15,6 +15,8 @@ app.use('/tasks', taskRoutes)
 const PORT = process.env.PORT || 5000
 const MONGO_URL = process.env.MONGO_URL
 
+console.log('🔍 Variables de entorno:', process.env)
+
 if (!MONGO_URL) {
   throw new Error('❌ MONGO_URL no está definida')
 }
