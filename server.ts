@@ -13,16 +13,14 @@ app.use(express.json())
 app.use('/tasks', taskRoutes)
 
 const PORT = process.env.PORT || 5000
-const MONGO_URI = process.env.MONGO_URI
+const MONGO_URL = process.env.MONGO_URL
 
-console.log('🔍 Variables de entorno:', process.env)
-
-if (!MONGO_URI) {
-  throw new Error('❌ MONGO_URI no está definida')
+if (!MONGO_URL) {
+  throw new Error('❌ MONGO_URL no está definida')
 }
 
 mongoose
-  .connect(MONGO_URI)
+  .connect(MONGO_URL)
   .then(() => {
     console.log('✅ Conectado a MongoDB')
     app.listen(PORT, () =>
