@@ -6,7 +6,6 @@
   "scripts": {
     "dev": "nodemon --watch src --ext ts --exec ts-node -r dotenv/config src/server.ts",
     "build": "tsc",
-    "vercel-build": "npm run build",
     "start": "node dist/server.js",
     "start:dev": "ts-node -r dotenv/config src/server.ts"
   },
