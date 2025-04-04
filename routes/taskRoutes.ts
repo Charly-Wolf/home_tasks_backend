@@ -22,7 +22,7 @@ router.put('/:id', async (req, res) => {
   try {
     const task = await Task.findByIdAndUpdate(
       req.params.id,
-      { done: req.body.done },
+      { text: req.body.text, done: req.body.done },
       { new: true }
     )
     res.json(task)
